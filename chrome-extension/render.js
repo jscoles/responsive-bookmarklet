@@ -1,17 +1,17 @@
-void((function () {
-    var d = document;
-    var html = [];
+
+    var d = document,
+        html = [];
+
     html.push('<!DOCTYPE html>');
     html.push('<html>');
     html.push('<head>');
     html.push('<meta charset="UTF-8">');
     html.push('<title>' + d.title + ' - Responsive test</title>');
-    html.push('<link rel="stylesheet" href="http://responsive.victorcoulon.fr/assets/css/app.css">');
-    html.push('<script src="app.js"></script>');
+    html.push('<script>window.resbook = {}</script>');
     html.push('</head>');
     html.push('<body>');
         html.push('<header>');
-            html.push('<div class="close"><a href="#">×</a></div>');
+            html.push('<div class="close"><a href="#">&times;</a></div>');
             html.push('<div id="size"></div>');
             html.push('<div class="keyboard"><a href="#">I</a></div>');
             html.push('<div class="cssrefresh"><a href="#">I</a></div>');
@@ -25,11 +25,13 @@ void((function () {
         html.push('</header>');
         html.push('<section>');
             html.push('<div id="wrapper">');
-                html.push('<iframe src="' + d.URL + '" onLoad="resbook.changeUrl(this.contentWindow.location,this.contentDocument.title);"></iframe>');
+                //html.push('<iframe src="' + d.URL + '" onLoad="resbook.changeUrl(this.contentWindow.location,this.contentDocument.title);"></iframe>');
+                html.push('<iframe src="' + d.URL + '"></iframe>');
                 html.push('<span class="keyboard-bg"></span>');
             html.push('</div>');
         html.push('</section>');
     html.push('</body>');
     html.push('</html>');
     d.write( html.join('') );
-})());
+
+
