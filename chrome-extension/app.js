@@ -1,6 +1,7 @@
-void((function () {
-    var d = document;
-    var html = [];
+
+    var d = document,
+        html = [];
+
     html.push('<!DOCTYPE html>');
     html.push('<html>');
     html.push('<head>');
@@ -11,7 +12,7 @@ void((function () {
     html.push('</head>');
     html.push('<body>');
         html.push('<header>');
-            html.push('<div class="close"><a href="#">×</a></div>');
+            html.push('<div class="close"><a href="#">&times;</a></div>');
             html.push('<div id="size"></div>');
             html.push('<div class="keyboard"><a href="#">I</a></div>');
             html.push('<div class="cssrefresh"><a href="#">I</a></div>');
@@ -32,4 +33,5 @@ void((function () {
     html.push('</body>');
     html.push('</html>');
     d.write( html.join('') );
-})());
+
+

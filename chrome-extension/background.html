@@ -1,0 +1,12 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+   <script>
+    chrome.browserAction.onClicked.addListener(function(tab) {
+        chrome.tabs.executeScript(tab.id, {file: 'app.js'});
+    });
+</script>
+</body>
+</html>
