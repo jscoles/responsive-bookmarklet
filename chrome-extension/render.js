@@ -1,4 +1,4 @@
-
+if(!window.resbook){
     var d = document,
         html = [];
 
@@ -25,7 +25,6 @@
         html.push('</header>');
         html.push('<section>');
             html.push('<div id="wrapper">');
-                //html.push('<iframe src="' + d.URL + '" onLoad="resbook.changeUrl(this.contentWindow.location,this.contentDocument.title);"></iframe>');
                 html.push('<iframe src="' + d.URL + '"></iframe>');
                 html.push('<span class="keyboard-bg"></span>');
             html.push('</div>');
@@ -33,5 +32,6 @@
     html.push('</body>');
     html.push('</html>');
     d.write( html.join('') );
+}
 
 
